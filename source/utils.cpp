@@ -24,7 +24,7 @@ bool IsTemplateExists(string temp) {
 
     // Check if 'temp' folder is in the templates directory.
     // If not, return false.
-    if (!IsDirectoryExists(TEMPLATE_DIR)) {
+    if (!IsDirectoryExists(TEMPLATE_DIR + temp)) {
         return false;
     }
     return true;
