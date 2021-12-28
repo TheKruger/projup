@@ -17,3 +17,5 @@ add_executable(projup ${SRC_FILES})
 target_include_directories(projup PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
+
+install(TARGETS projup DESTINATION bin)
