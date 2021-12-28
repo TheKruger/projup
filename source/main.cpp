@@ -8,12 +8,13 @@ int main(int argc, char* argv[])
 
     for (int i = 0; i < argc; i++)
     {
-        if (argv[i] == "--version" || argv[i] == "-V")
+        string arg = argv[i];
+        if (arg == "--version" || arg == "-V")
         {
             cout << "projup version: " << VERSION << endl;
             return 0;
         }
-        else if (argv[i] == "--help" || argv[i] == "-h")
+        else if (arg == "--help" || arg == "-h")
         {
             cout << "Usage: " << argv[0] << " <path> <template> [VARIABLES]" << endl;
             cout << "Options:" << endl;
@@ -22,7 +23,7 @@ int main(int argc, char* argv[])
             cout << "  --verbose, -v  Increase the verbosity level." << endl;
             return 0;
         }
-        else if (argv[i] == "--verbose" || argv[i] == "-v")
+        else if (arg == "--verbose" || arg == "-v")
         {
             verbose = true;
         }
