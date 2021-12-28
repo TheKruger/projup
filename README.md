@@ -1,4 +1,4 @@
-# Projup
+# Projup [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 Projup is a simple project setuper that can setup a project from a template.
 
 # Build from soruce and install
