@@ -4,13 +4,6 @@
 
 int main(int argc, char* argv[])
 {
-
-    if (argc < 2)
-    {
-        cout << "Usage: " << argv[0] << " <path> <template> [VARIABLES]" << endl;
-        return 1;
-    }
-
     bool verbose = false;
 
     for (int i = 0; i < argc; i++)
@@ -33,6 +26,12 @@ int main(int argc, char* argv[])
         {
             verbose = true;
         }
+    }
+
+    if (argc < 3)
+    {
+        cout << "Usage: " << argv[0] << " <path> <template> [VARIABLES]" << endl;
+        return 1;
     }
 
     // In this context the 'temp' is not the short of temporary,
