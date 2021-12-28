@@ -19,3 +19,4 @@ bool IsTemplateExists(string temp);
 string ReadFile(string file);
 void WriteFile(string file, string content);
 void CollectVariables(map<string, string>& variables, int argc, char* argv[]);
+void RunProjup(string path, map<string, string>& variables);
