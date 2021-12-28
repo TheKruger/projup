@@ -37,7 +37,7 @@ templates/
 
 And now you can create any file in the `c` folder. Because when you run `projup my_project c` it will create a folder called `my_project` and copy all the files in the `c` folder to the `my_project` folder.
 
-When creating the files in the `c` folder, you can use (variables)[https://github.com/TheKruger/projup/README.md#variables]. And also you can add your own variables.
+When creating the files in the `c` folder, you can use [variables](https://github.com/TheKruger/projup/README.md#variables). And also you can add your own variables.
 
 Now I create a `main.c` file in the `c` folder and put the following code:
 ```c
