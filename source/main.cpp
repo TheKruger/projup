@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
     // Check if template file exists
     if (!IsTemplateExists(temp))
     {
-        cout << "Template file does not exist: " << temp << endl;
+        cout << "Template does not exist: " << temp << endl;
         return 1;
     }
 
