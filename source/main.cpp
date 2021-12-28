@@ -13,20 +13,23 @@ int main(int argc, char* argv[])
 
     bool verbose = false;
 
-    for (int i = 3; i < argc; i++)
+    for (int i = 0; i < argc; i++)
     {
-        string arg = argv[i];
-        if (arg == "--version" || arg == "-V")
+        if (argv[i] == "--version" || argv[i] == "-V")
         {
             cout << "projup version: " << VERSION << endl;
             return 0;
         }
-        else if (arg == "--help" || arg == "-h")
+        else if (argv[i] == "--help" || argv[i] == "-h")
         {
             cout << "Usage: " << argv[0] << " <path> <template> [VARIABLES]" << endl;
+            cout << "Options:" << endl;
+            cout << "  --version, -V  Print version and exit." << endl;
+            cout << "  --help, -h     Display this help message and exit." << endl;
+            cout << "  --verbose, -v  Increase the verbosity level." << endl;
             return 0;
         }
-        else if (arg == "--verbose" || arg == "-v")
+        else if (argv[i] == "--verbose" || argv[i] == "-v")
         {
             verbose = true;
         }
