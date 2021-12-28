@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
     if (verbose)
         std::cout << "Copying files..." << std::endl;
     const auto CopyOptions = fs::copy_options::recursive | fs::copy_options::update_existing | fs::copy_options::overwrite_existing;
-    fs::copy("templates/" + temp, path, CopyOptions);
+    fs::copy(TEMPLATE_DIR + temp, path, CopyOptions);
 
     // Looping through the files in the new directory including subdirectories
     // and replace the variables with the values from the 'variables' map.
