@@ -1,10 +1,6 @@
 #include <utils.h>
 
-#include <filesystem>
-
 #define VERSION "v1.0.0"
-
-namespace fs = std::filesystem;
 
 int main(int argc, char* argv[])
 {
@@ -59,7 +55,7 @@ int main(int argc, char* argv[])
 
     // Create directory if it does not exist
     if (!IsDirectoryExists(path))
-        std::filesystem::create_directory(path);
+        fs::create_directory(path);
 
     // Copy the files from the tempalte/<template> directory to the new directory.
     if (verbose)
