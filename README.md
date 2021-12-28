@@ -6,7 +6,6 @@ Projup is a simple project setuper that can setup a project from a template.
 ```
 cmake .
 make
-chmod +x install.sh
 sudo ./install.sh
 ```
 
