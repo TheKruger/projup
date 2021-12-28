@@ -4,6 +4,10 @@
 #include <regex>
 #include <fstream>
 #include <iostream>
+#include <filesystem>
+
+namespace fs = std::filesystem;
+using namespace std;
 
 #define TEMPLATE_DIR "templates"
 

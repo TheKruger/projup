@@ -4,7 +4,9 @@
 #include <regex>
 #include <fstream>
 #include <iostream>
+#include <filesystem>
 
+namespace fs = std::filesystem;
 using namespace std;
 
 string Replace(string str, string from, string to) {
@@ -14,11 +16,7 @@ string Replace(string str, string from, string to) {
 
 // Check if directory exists.
 bool IsDirectoryExists(string dir) {
-    struct stat info;
-    if (stat(dir.c_str(), &info) != 0) {
-        return false;
-    }
-    return (info.st_mode & S_IFDIR) != 0;
+    return fs::exists(dir);
 }
 
 // Check if template exists.
@@ -50,7 +48,7 @@ void CollectVariables(map<string, string>& variables, int argc, char* argv[]) {
         if (var.find("=") == string::npos) {
             continue;
         }
-        
+
         size_t pos = var.find("=");
         if (pos != string::npos) {
             string key = var.substr(0, pos);
