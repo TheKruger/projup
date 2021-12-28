@@ -5,7 +5,7 @@
 int main(int argc, char* argv[])
 {
 
-    if (argc < 3)
+    if (argc < 2)
     {
         cout << "Usage: " << argv[0] << " <path> <template> [VARIABLES]" << endl;
         return 1;
