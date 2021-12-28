@@ -9,7 +9,7 @@
 namespace fs = std::filesystem;
 using namespace std;
 
-#define TEMPLATE_DIR "templates"
+#define TEMPLATE_DIR "/etc/projup/templates"
 
 using namespace std;
 
