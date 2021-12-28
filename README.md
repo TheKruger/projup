@@ -1,18 +1,12 @@
 # Projup
 Projup is a simple project setuper that can setup a project from a template.
 
-# Build from soruce
+# Build from soruce and install
 
-### Linux
 ```
 cmake .
 make
-```
-
-### Windows
-```
-cmake .
-cmake --build . --config Release
+sudo ./install.sh
 ```
 
 # Usage
@@ -31,11 +25,11 @@ First create a folder in the `templates` folder that called `c`.
 
 So the folder structure should be looks like this:
 ```
-templates/
-    c/
+/etc/projup/templates/
+└── c
 ```
 
-And now you can create any file in the `c` folder. Because when you run `projup my_project c` it will create a folder called `my_project` and copy all the files in the `c` folder to the `my_project` folder.
+And now you can create any file in the `c` folder. Because when you run `projup my_project c` it will create a folder called `my_project` and copy all the files in the `c` folder to the `my_project` folder and replace the variables.
 
 When creating the files in the `c` folder, you can use [variables](https://github.com/TheKruger/projup#variables). And also you can add your own variables.
 
