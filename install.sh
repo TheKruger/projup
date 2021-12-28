@@ -10,5 +10,5 @@ cmake --install .
 # Create a folder in /etc/projup/
 mkdir /etc/projup/
 
-# Move the templates folder to /etc/projup/
-mv templates /etc/projup/
+# Copy the templates folder to /etc/projup/
+cp -r templates /etc/projup/
