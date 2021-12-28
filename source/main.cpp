@@ -74,7 +74,12 @@ int main(int argc, char* argv[])
     {
         if (entry.is_regular_file())
         {
+            // If the file is the projup file, skip it.
+            if (entry.path().filename() == "projup")
+                continue;
+
             string content = ReadFile(entry.path().string());
+
             for (const auto& var : variables)
             {
                 content = Replace(content, var.first, var.second);
@@ -82,6 +87,11 @@ int main(int argc, char* argv[])
             WriteFile(entry.path().string(), content);
         }
     }
+
+    // Run projup file if it exists in the directory.
+    if (verbose)
+        std::cout << "Running projup file..." << std::endl;
+    RunProjup(path, variables);
 
     if (verbose)
         std::cout << "Project created successfully." << std::endl;
