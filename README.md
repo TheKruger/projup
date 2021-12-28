@@ -22,7 +22,7 @@ If you want you can create your own template project that can be used to create 
 
 For the example I create a C template.
 
-First create a folder in the `templates` folder that called `c`.
+First create a folder in the `/etc/projup/templates` folder that called `c`.
 
 So the folder structure should be looks like this:
 ```
@@ -30,9 +30,9 @@ So the folder structure should be looks like this:
 └── c
 ```
 
-And now you can create any file in the `c` folder. Because when you run `projup my_project c` it will create a folder called `my_project` and copy all the files in the `c` folder to the `my_project` folder and replace the variables.
+And now you can create any file in the `c` folder. Because when you run `projup my_project c` it will create a folder called `my_project` and copy all the files from the `template/c` folder into the `my_project` folder and then replace the variables.
 
-When creating the files in the `c` folder, you can use [variables](https://github.com/TheKruger/projup#variables). And also you can add your own variables.
+When creating the files in the `c` folder, you can use [variables](https://github.com/TheKruger/projup#variables) and also you can add your own variables.
 
 Now I create a `main.c` file in the `c` folder and put the following code:
 ```c
@@ -48,7 +48,7 @@ int main() {
 ```
 
 # Variables
-These variables are built in the `projup` and can be used in the files.
+These variables are built-in the `projup` and can be used in the files.
 
 Note: These variables are not contains quotes.
 
@@ -57,7 +57,7 @@ Note: These variables are not contains quotes.
 | `$NAME` | The name of the project. | `my_project` |
 | `$TEMPLATE` | The name of the template. | `c` |
 
-If you want to add custom variables, you can add them to the by running the following command:
+If you want to add custom variables, you can add them by running the following command:
 ```
 projup my_project c my_variable=my_value a=1
 ```
