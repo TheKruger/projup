@@ -53,7 +53,7 @@ These variables are built in the `projup` and can be used in the files.
 Note: These variables are not contains quotes.
 
 | Variable | Description | Example |
-| --- | --- |
+| - | - | - |
 | `$NAME` | The name of the project. | `my_project` |
 | `$TEMPLATE` | The name of the template. | `c` |
 
