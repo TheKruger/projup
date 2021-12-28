@@ -80,7 +80,8 @@ int main(int argc, char* argv[])
         }
     }
 
-    std::cout << "Project created successfully." << std::endl;
+    if (verbose)
+        std::cout << "Project created successfully." << std::endl;
 
     return 0;
 }
